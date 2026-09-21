@@ -10,8 +10,13 @@
 
 ```bash
 brew tap monkey-forge/tap
+brew trust monkey-forge/tap
 brew install --cask monkeyforge
 ```
+
+`brew trust` is not optional: since Homebrew 6 a cask from a tap outside
+`homebrew/*` refuses to load until you say you trust its source. Skipping it
+gets you `Refusing to load cask ... from untrusted tap`.
 
 Apple Silicon only for now — the release build produces a single macOS
 artifact, so the cask refuses an Intel Mac instead of handing it a download
