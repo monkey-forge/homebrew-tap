@@ -1,10 +1,10 @@
 cask "monkeyforge" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.50.0"
-  sha256 arm:          "a2105914980f2a6cb18e58dae4937fd6de4ec55076792f3dcf6cae812f461d29",
-         arm64_linux:  "14e36e8642959c2c34aa9a20d50a2a4b972697e9a1a7935c08ca048f4df85027",
-         x86_64_linux: "cc491f9d02899e467dd8b6fa7d3184345d29692d549dc523f774dae0ce28f758"
+  version "1.51.0"
+  sha256 arm:          "8bc197453fbe7d8c2edde1705fe0025425ac20f7932c15a4b751f625d3113ceb",
+         arm64_linux:  "0b39d44199bdb04eeed00087ed33be87d4a95e99c837e602ff6e20649f8b10df",
+         x86_64_linux: "a74b9aad64e6aa7d9941daf2ecb0114c3707a169e988a37bfcee0ae4b2c832d7"
 
   on_macos do
     url "https://updates.monkeyforge.dev/MonkeyForge-#{version}-arm64.dmg"
@@ -15,9 +15,7 @@ cask "monkeyforge" do
     depends_on arch: :arm64
     depends_on macos: :monterey
 
-    # 1.50.0's bundle is lowercase (fixed in the next release); the target keeps
-    # the installed name. Back to plain `app "MonkeyForge.app"` after 1.50.x.
-    app "monkeyforge.app", target: "MonkeyForge.app"
+    app "MonkeyForge.app"
 
     zap trash: [
       "~/Library/Application Support/MonkeyForge",
