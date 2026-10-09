@@ -1,10 +1,10 @@
 cask "monkeyforge" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "1.51.0"
-  sha256 arm:          "8bc197453fbe7d8c2edde1705fe0025425ac20f7932c15a4b751f625d3113ceb",
-         arm64_linux:  "0b39d44199bdb04eeed00087ed33be87d4a95e99c837e602ff6e20649f8b10df",
-         x86_64_linux: "a74b9aad64e6aa7d9941daf2ecb0114c3707a169e988a37bfcee0ae4b2c832d7"
+  version "1.52.0"
+  sha256 arm:          "844e9009f8ea277cc8ff0c9efb682837ca48cdcc1a85b07ca6cae7d39260f905",
+         arm64_linux:  "35944818dd200faa6c206135b4fc40d4893d1131df4474555f2772fa1fd1f6c3",
+         x86_64_linux: "864e71f9917c8991e2223279d7555173023284ea414e8dd87b279cd3fb057872"
 
   on_macos do
     url "https://updates.monkeyforge.dev/MonkeyForge-#{version}-arm64.dmg"
